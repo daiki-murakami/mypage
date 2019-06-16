@@ -1,0 +1,3 @@
+test:
+  name: Test
+  password_digest: <%= User.digest('password') %>
