@@ -1,9 +1,10 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get pages_new_url
-    assert_response :success
-  end
 
+  test "get new page path without login" do
+    get new_page_path
+    assert_redirected_to root_path
+  end
+  
 end
